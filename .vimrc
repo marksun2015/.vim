@@ -10,11 +10,21 @@ set cindent
 set hlsearch
 set nu
 
+""""""""""""""""""""""""""""""""
+" record position
+""""""""""""""""""""""""""""""""
+if has("autocmd")
+    autocmd BufRead *.txt set tw=78
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal g'\"" |
+    \ endif
+endif
+
+""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
+""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
 
-" Initialize plugin system
 call plug#end()
