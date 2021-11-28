@@ -22,9 +22,15 @@ if has("autocmd")
 endif
 
 """"""""""""""""""""""""""""""""
+" NERDTree setting
+""""""""""""""""""""""""""""""""
+nnoremap <silent> <F2> :NERDTreeToggle<Enter>
+let NERDTreeMinimalUI = 1
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-
-
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
