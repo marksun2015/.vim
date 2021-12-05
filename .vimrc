@@ -29,6 +29,12 @@ let NERDTreeMinimalUI = 1
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 """"""""""""""""""""""""""""""""
+" vim-airline setting
+""""""""""""""""""""""""""""""""
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
