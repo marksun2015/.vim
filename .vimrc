@@ -35,9 +35,19 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""
+" ctrlp setting
+""""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
