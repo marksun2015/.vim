@@ -32,5 +32,6 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 " Specify a directory for plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
 call plug#end()
