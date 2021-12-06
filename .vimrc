@@ -24,7 +24,7 @@ endif
 """"""""""""""""""""""""""""""""
 " NERDTree setting
 """"""""""""""""""""""""""""""""
-nnoremap <silent> <F2> :NERDTreeToggle<Enter>
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeMinimalUI = 1
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
@@ -44,6 +44,11 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 """"""""""""""""""""""""""""""""
+" taglist setting
+""""""""""""""""""""""""""""""""
+nnoremap <silent> <F9> :TlistToggle <CR>
+
+""""""""""""""""""""""""""""""""
 " Specify a directory for plugins
 """"""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
@@ -52,4 +57,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'vim-scripts/taglist.vim'
+Plug 'will133/vim-dirdiff'
 call plug#end()
