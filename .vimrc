@@ -59,4 +59,5 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/taglist.vim'
 Plug 'will133/vim-dirdiff'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
