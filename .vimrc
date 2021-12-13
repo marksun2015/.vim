@@ -60,4 +60,5 @@ Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/taglist.vim'
 Plug 'will133/vim-dirdiff'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'ycm-core/YouCompleteMe'
 call plug#end()
